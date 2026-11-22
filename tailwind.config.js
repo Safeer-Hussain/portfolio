@@ -8,38 +8,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: {
+        brand: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+        },
+        surface: {
           dark: '#0B0F19',
-          darker: '#070A11',
-          card: '#111726',
-          border: '#1E293B',
+          darkCard: '#111726',
+          darkMuted: '#1E293B',
           light: '#F8FAFC',
           lightCard: '#FFFFFF',
-          lightBorder: '#E2E8F0',
-        },
-        accent: {
-          emerald: '#10B981',
-          emeraldLight: '#34D399',
-          cyan: '#06B6D4',
-          cyanLight: '#22D3EE',
-          slate: '#64748B',
-          amber: '#F59E0B',
-          violet: '#8B5CF6',
+          lightMuted: '#F1F5F9',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'Fira Code', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
-      animation: {
-        'pulse-subtle': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-        'float-slow': 'float 6s ease-in-out infinite',
-      },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-6px)' },
-        }
+      boxShadow: {
+        'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03)',
+        'elevated': '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
+        'glow': '0 0 35px -5px rgba(14, 165, 233, 0.15)',
       }
     },
   },

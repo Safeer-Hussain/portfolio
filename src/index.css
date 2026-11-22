@@ -12,91 +12,61 @@
   }
 
   body {
-    @apply transition-colors duration-200;
+    @apply transition-colors duration-200 antialiased;
   }
 }
 
-/* Engineering Blueprint & Terminal Grid Background */
-.bg-terminal-grid {
+/* Modern executive card surface */
+.executive-card {
+  @apply rounded-2xl border transition-all duration-300;
+  background-color: rgba(17, 24, 39, 0.85);
+  border-color: rgba(30, 41, 59, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.25);
+}
+
+html.light .executive-card {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+}
+
+/* Subtle background accent glow */
+.subtle-mesh {
   background-image: 
-    linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
-  background-size: 32px 32px;
+    radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.06) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.04) 0px, transparent 50%);
 }
 
-html.light .bg-terminal-grid {
+html.light .subtle-mesh {
   background-image: 
-    linear-gradient(to right, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.06) 1px, transparent 1px);
-  background-size: 32px 32px;
+    radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
 }
 
-/* Subtle blueprint dot grid */
-.bg-blueprint-dots {
-  background-image: radial-gradient(rgba(14, 165, 233, 0.12) 1px, transparent 0);
-  background-size: 24px 24px;
-}
-
-html.light .bg-blueprint-dots {
-  background-image: radial-gradient(rgba(14, 165, 233, 0.18) 1px, transparent 0);
-  background-size: 24px 24px;
-}
-
-/* Glassmorphic card styling */
-.glass-panel {
-  background: rgba(17, 23, 38, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(30, 41, 59, 0.8);
-}
-
-html.light .glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-}
-
-/* Custom terminal scrollbars */
+/* Custom scrollbars */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #070A11;
+  background: #0b0f19;
 }
 
 html.light ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1E293B;
-  border-radius: 4px;
+  background: #334155;
+  border-radius: 9999px;
 }
 
 html.light ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
-  border-radius: 4px;
+  background: #cbd5e1;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #10B981;
-}
-
-/* Terminal blinking cursor */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
-
-.terminal-cursor {
-  display: inline-block;
-  width: 8px;
-  height: 18px;
-  background-color: #10B981;
-  animation: blink 1s step-end infinite;
-  vertical-align: middle;
-  margin-left: 4px;
+  background: #0ea5e9;
 }

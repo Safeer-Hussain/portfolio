@@ -1,18 +1,22 @@
 export type ProjectCategory = 
   | 'All' 
   | 'FinTech & Commerce' 
-  | 'AI & Telemetry' 
-  | 'Enterprise & Civic' 
-  | 'Health & Lifestyle';
+  | 'AI & Health' 
+  | 'Enterprise & Operations' 
+  | 'Smart Living & Lifestyle';
 
 export interface ProjectArchitecture {
   id: string;
   name: string;
   title: string;
   category: ProjectCategory;
+  folder: string;
+  screenshots: string[];
   stateManagement: string;
   nativeBridge: string;
   tagline: string;
+  valueProposition: string;
+  cleanTechPills: string[];
   description: string;
   keyHighlights: string[];
   techStack: string[];

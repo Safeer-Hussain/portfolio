@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
 import { useTheme } from './hooks/useTheme';
-import { StatusBar } from './components/StatusBar';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { HeroSection } from './sections/HeroSection';
-import { MetricsStrip } from './sections/MetricsStrip';
-import { PillarsSection } from './sections/PillarsSection';
-import { PackagesSection } from './sections/PackagesSection';
 import { ProjectsSection } from './sections/ProjectsSection';
-import { ArchitectureSection } from './sections/ArchitectureSection';
-import { ExperienceSection } from './sections/ExperienceSection';
-import { CertificationsSection } from './sections/CertificationsSection';
-import { ContactSection } from './sections/ContactSection';
+import { PackagesSection } from './sections/PackagesSection';
+import { PillarsSection } from './sections/PillarsSection';
+import { CredentialsSection } from './sections/CredentialsSection';
 import { ArchitectureModal } from './components/ArchitectureModal';
 import { CodeModal } from './components/CodeModal';
 import { ProjectArchitecture, OpenSourcePackage } from './types';
@@ -22,35 +17,32 @@ export const App: React.FC = () => {
   const [selectedPackage, setSelectedPackage] = useState<OpenSourcePackage | null>(null);
 
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'dark bg-[#0B0F19]' : 'light bg-slate-50'} text-slate-100 flex flex-col font-sans transition-colors duration-200`}>
-      {/* Background terminal blueprint grid */}
-      <div className="fixed inset-0 bg-terminal-grid pointer-events-none z-0" />
+    <div className={`min-h-screen ${theme === 'dark' ? 'dark bg-slate-950 text-slate-100' : 'light bg-slate-50 text-slate-900'} flex flex-col font-sans transition-colors duration-200 selection:bg-sky-500/20 selection:text-sky-300`}>
+      {/* Minimal Top Navbar */}
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
 
-      {/* Persistent System Status Bar */}
-      <div className="relative z-40">
-        <StatusBar />
-        <Navbar theme={theme} toggleTheme={toggleTheme} />
-      </div>
-
-      {/* Main Content Layout */}
-      <main className="relative z-10 flex-grow">
+      {/* Main Content Sections (Strict Order) */}
+      <main className="flex-grow">
+        {/* 1. Hero Section + 4-Stat Strip */}
         <HeroSection />
-        <MetricsStrip />
-        <PillarsSection />
-        <PackagesSection onOpenCodeModal={(pkg) => setSelectedPackage(pkg)} />
+
+        {/* 2. Featured Work — 15 Applications Showcase with Screenshots */}
         <ProjectsSection onOpenModal={(project) => setSelectedProject(project)} />
-        <ArchitectureSection />
-        <ExperienceSection />
-        <CertificationsSection />
-        <ContactSection />
+
+        {/* 3. Open-Source Packages (pub.dev 160/160 Target) */}
+        <PackagesSection onOpenCodeModal={(pkg) => setSelectedPackage(pkg)} />
+
+        {/* 4. Core Expertise & Architecture Principles (4 Clean Cards) */}
+        <PillarsSection />
+
+        {/* 5. Credentials & Leadership (Octet Solutions, Finjineers & Credly) */}
+        <CredentialsSection />
       </main>
 
-      {/* Persistent Engineering Terminal Footer */}
-      <div className="relative z-10">
-        <Footer />
-      </div>
+      {/* Clean Footer & Contact */}
+      <Footer />
 
-      {/* Interactive Architecture Modal */}
+      {/* Interactive Case Study & Architecture Modal */}
       <ArchitectureModal 
         project={selectedProject} 
         onClose={() => setSelectedProject(null)} 

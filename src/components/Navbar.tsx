@@ -1,15 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  Terminal, 
-  Menu, 
-  X, 
-  Github, 
-  Linkedin, 
-  Package, 
-  Award
-} from 'lucide-react';
+import { Menu, X, ArrowUpRight, Sun, Moon } from 'lucide-react';
 import { HERO_DATA } from '../data/portfolioData';
-import { ThemeToggle } from './ThemeToggle';
 import { Theme } from '../hooks/useTheme';
 
 interface NavbarProps {
@@ -21,114 +12,89 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Pillars', href: '#pillars' },
-    { label: 'Pub.dev Packages', href: '#packages' },
-    { label: 'Enterprise Apps (15)', href: '#apps' },
-    { label: 'Architecture Matrix', href: '#architecture' },
-    { label: 'Leadership', href: '#experience' },
-    { label: 'Certifications', href: '#certifications' },
+    { label: 'Work', href: '#work' },
+    { label: 'Open Source', href: '#packages' },
+    { label: 'Expertise', href: '#expertise' },
+    { label: 'Credentials', href: '#credentials' },
     { label: 'Contact', href: '#contact' },
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-[#0B0F19]/90 border-b border-slate-800/80 transition-colors duration-200 dark:bg-[#0B0F19]/90 dark:border-slate-800/80 light:bg-white/95 light:border-slate-200">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-slate-950/85 dark:bg-slate-950/85 light:bg-white/90 border-b border-slate-800/80 dark:border-slate-800/80 light:border-slate-200/90 transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Brand Logo & Callsign */}
+          {/* Brand Identity */}
           <a 
             href="#" 
-            className="flex items-center gap-3 group focus:outline-none"
-            aria-label="Safeer Hussain Portfolio Home"
+            className="flex items-center gap-2.5 group focus:outline-none"
+            aria-label="Safeer Hussain Home"
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 group-hover:border-emerald-400 transition-colors">
-              <Terminal className="w-5 h-5 text-emerald-400" />
+            <div className="w-8 h-8 rounded-lg bg-sky-500/10 dark:bg-sky-500/10 light:bg-sky-50 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:border-sky-400 transition-colors">
+              <span className="font-bold text-sm tracking-tight text-sky-500 dark:text-sky-400 light:text-sky-600">SH</span>
             </div>
             <div>
-              <div className="flex items-center gap-2">
-                <span className="font-mono font-bold text-base tracking-tight text-white dark:text-white light:text-slate-900 group-hover:text-emerald-400 transition-colors">
-                  Safeer Hussain
-                </span>
-                <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                  ARCHITECT
-                </span>
-              </div>
-              <p className="text-[11px] font-mono text-slate-400 dark:text-slate-400 light:text-slate-500 hidden sm:block">
-                AI • Cybersecurity • Cloud/DevOps
-              </p>
+              <span className="font-bold text-base tracking-tight text-white dark:text-white light:text-slate-900 group-hover:text-sky-400 transition-colors block">
+                {HERO_DATA.name}
+              </span>
             </div>
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 font-mono text-xs">
+          <nav className="hidden md:flex items-center gap-1 text-sm font-medium">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-2.5 py-1.5 rounded-md text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-emerald-400 dark:hover:text-emerald-400 light:hover:text-emerald-600 hover:bg-slate-800/50 dark:hover:bg-slate-800/50 light:hover:bg-slate-100 transition-colors"
+                className="px-3.5 py-1.5 rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 hover:bg-slate-800/60 dark:hover:bg-slate-800/60 light:hover:bg-slate-100 transition-colors"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Social Icons & Actions */}
-          <div className="hidden sm:flex items-center gap-2">
+          {/* Actions & Theme Toggle */}
+          <div className="hidden sm:flex items-center gap-3">
             <a
               href={HERO_DATA.socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub Profile"
-              className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800/60 dark:hover:bg-slate-800/60 light:hover:bg-slate-100 transition-colors"
-              title="GitHub Profile"
+              className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-slate-800 dark:hover:bg-slate-800 light:hover:bg-slate-100 transition-colors inline-flex items-center gap-1.5"
             >
-              <Github className="w-4 h-4" />
+              <span>GitHub</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
             </a>
 
-            <a
-              href={HERO_DATA.socialLinks.pubDev}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="pub.dev Packages"
-              className="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 dark:hover:bg-slate-800/60 light:hover:bg-slate-100 transition-colors"
-              title="pub.dev Published Packages"
+            <div className="w-px h-5 bg-slate-800 dark:bg-slate-800 light:bg-slate-200" />
+
+            <button
+              onClick={toggleTheme}
+              type="button"
+              className="p-2 rounded-lg border border-slate-800 dark:border-slate-800 light:border-slate-200 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-sky-400 transition-colors"
+              title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
+              aria-label="Toggle Theme"
             >
-              <Package className="w-4 h-4" />
-            </a>
-
-            <a
-              href={HERO_DATA.socialLinks.credly}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Credly Certifications"
-              className="p-2 rounded-lg text-slate-400 hover:text-emerald-400 hover:bg-slate-800/60 dark:hover:bg-slate-800/60 light:hover:bg-slate-100 transition-colors"
-              title="Credly Verified Certifications"
-            >
-              <Award className="w-4 h-4" />
-            </a>
-
-            <a
-              href={HERO_DATA.socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn Profile"
-              className="p-2 rounded-lg text-slate-400 hover:text-cyan-400 hover:bg-slate-800/60 dark:hover:bg-slate-800/60 light:hover:bg-slate-100 transition-colors"
-              title="LinkedIn Profile"
-            >
-              <Linkedin className="w-4 h-4" />
-            </a>
-
-            <div className="w-px h-5 bg-slate-800 dark:bg-slate-800 light:bg-slate-200 mx-1" />
-
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+              {theme === 'dark' ? (
+                <Sun className="w-4 h-4 text-amber-400" />
+              ) : (
+                <Moon className="w-4 h-4 text-sky-600" />
+              )}
+            </button>
           </div>
 
           {/* Mobile Menu Trigger & Theme Toggle */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              onClick={toggleTheme}
+              type="button"
+              className="p-2 rounded-lg border border-slate-800 dark:border-slate-800 light:border-slate-300 bg-slate-900 dark:bg-slate-900 light:bg-white text-slate-300 dark:text-slate-300 light:text-slate-700"
+              aria-label="Toggle Theme"
+            >
+              {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-sky-600" />}
+            </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className="p-2 rounded-lg border border-slate-800 dark:border-slate-800 light:border-slate-300 text-slate-400 hover:text-white dark:hover:text-white light:hover:text-slate-900 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white"
+              className="p-2 rounded-lg border border-slate-800 dark:border-slate-800 light:border-slate-300 text-slate-300 dark:text-slate-300 light:text-slate-700 bg-slate-900 dark:bg-slate-900 light:bg-white"
               aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -137,58 +103,28 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
         </div>
       </div>
 
-      {/* Mobile Drawer (Tested for 360dp mobile viewports) */}
+      {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-slate-800 bg-[#070A11]/98 dark:bg-[#070A11]/98 light:bg-white/98 px-4 py-5 space-y-3 font-mono text-sm animate-in slide-in-from-top-2 duration-150">
-          <div className="space-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 rounded-md text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-emerald-400 hover:bg-slate-800/50 dark:hover:bg-slate-800/50 light:hover:bg-slate-100 transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-
-          <div className="pt-3 border-t border-slate-800 dark:border-slate-800 light:border-slate-200 flex items-center justify-around">
+        <div className="md:hidden border-b border-slate-800/80 dark:border-slate-800/80 light:border-slate-200 bg-slate-950/98 dark:bg-slate-950/98 light:bg-white/98 px-4 py-4 space-y-2 text-sm font-medium">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-3 py-2 rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-slate-800 dark:hover:bg-slate-800 light:hover:bg-slate-100 transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+          <div className="pt-2 border-t border-slate-800/80 dark:border-slate-800/80 light:border-slate-200">
             <a
               href={HERO_DATA.socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-emerald-400"
+              className="flex items-center justify-between px-3 py-2 rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-slate-800 dark:hover:bg-slate-800 light:hover:bg-slate-100"
             >
-              <Github className="w-4 h-4" />
-              <span>GitHub</span>
-            </a>
-            <a
-              href={HERO_DATA.socialLinks.pubDev}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-cyan-400"
-            >
-              <Package className="w-4 h-4" />
-              <span>pub.dev</span>
-            </a>
-            <a
-              href={HERO_DATA.socialLinks.credly}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-emerald-400"
-            >
-              <Award className="w-4 h-4" />
-              <span>Credly</span>
-            </a>
-            <a
-              href={HERO_DATA.socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-xs text-slate-400 hover:text-cyan-400"
-            >
-              <Linkedin className="w-4 h-4" />
-              <span>LinkedIn</span>
+              <span>GitHub Profile</span>
+              <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
         </div>

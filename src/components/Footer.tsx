@@ -1,13 +1,11 @@
 import React from 'react';
 import { 
-  Terminal, 
   Github, 
   Linkedin, 
-  Award, 
-  Package, 
-  Shield, 
+  Mail, 
+  MapPin, 
   ArrowUp,
-  GitCommit
+  ArrowUpRight
 } from 'lucide-react';
 import { HERO_DATA } from '../data/portfolioData';
 
@@ -17,121 +15,85 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full bg-[#070A11] border-t border-slate-800/80 pt-12 pb-8 font-mono text-xs text-slate-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800/80">
-          {/* Identity & Core Principle */}
-          <div className="md:col-span-2 space-y-3">
-            <div className="flex items-center gap-2 text-white">
-              <Terminal className="w-4 h-4 text-emerald-400" />
-              <span className="font-bold text-sm tracking-tight">
-                {HERO_DATA.name}
-              </span>
-              <span className="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-                {HERO_DATA.callsign}
-              </span>
-            </div>
-
-            <p className="text-slate-400 text-xs leading-relaxed max-w-md font-sans">
-              Principal System Architect & App Engineer building resilient, offline-first applications, native hardware bridges, and automated release engineering pipelines.
+    <footer id="contact" className="w-full bg-slate-950 text-slate-400 border-t border-slate-800/80 pt-16 pb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main CTA Box */}
+        <div className="rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 p-8 sm:p-12 mb-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 shadow-xl">
+          <div className="max-w-2xl space-y-3">
+            <span className="text-xs font-semibold px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 border border-sky-500/20 inline-block">
+              Get in Touch
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Let's build resilient, high-impact systems together.
+            </h3>
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+              Available for Principal Systems Architecture advisory, mobile ecosystem transformations, and lead engineering roles.
             </p>
-
-            <div className="flex items-center gap-2 pt-1">
-              <span className="inline-flex items-center gap-1.5 px-2 py-1 rounded bg-slate-900 border border-slate-800 text-[11px] text-emerald-400">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span>{HERO_DATA.currentAvailability}</span>
-              </span>
+            <div className="flex items-center gap-2 text-xs text-slate-400 pt-1">
+              <MapPin className="w-4 h-4 text-sky-400" />
+              <span>Based in {HERO_DATA.location} (GMT+05:00) · Open to global remote engagements</span>
             </div>
           </div>
 
-          {/* Verification & Social Links */}
-          <div className="space-y-2">
-            <span className="text-slate-300 font-semibold uppercase tracking-wider text-[11px] block mb-2">
-              Provenance & Verification
-            </span>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href={HERO_DATA.socialLinks.credly}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-emerald-400 transition-colors flex items-center gap-1.5"
-                >
-                  <Award className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Credly Certified Profile</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={HERO_DATA.socialLinks.pubDev}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-cyan-400 transition-colors flex items-center gap-1.5"
-                >
-                  <Package className="w-3.5 h-3.5 text-cyan-400" />
-                  <span>pub.dev Packages (5)</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={HERO_DATA.socialLinks.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors flex items-center gap-1.5"
-                >
-                  <Github className="w-3.5 h-3.5" />
-                  <span>GitHub Repositories</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={HERO_DATA.socialLinks.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-cyan-400 transition-colors flex items-center gap-1.5"
-                >
-                  <Linkedin className="w-3.5 h-3.5" />
-                  <span>LinkedIn Network</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+            <a
+              href={`mailto:${HERO_DATA.socialLinks.email}?subject=Architecture%20Inquiry%20-%20Safeer%20Hussain`}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-semibold text-sm transition-all shadow-md shadow-sky-600/20"
+            >
+              <Mail className="w-4 h-4" />
+              <span>Send Email</span>
+            </a>
 
-          {/* Security & Cryptography Box */}
-          <div className="space-y-2">
-            <span className="text-slate-300 font-semibold uppercase tracking-wider text-[11px] block mb-2">
-              Cryptographic Footprint
-            </span>
-            <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-800 space-y-1.5">
-              <div className="flex items-center gap-1.5 text-emerald-400 text-[11px]">
-                <Shield className="w-3.5 h-3.5" />
-                <span>GPG KEY ID:</span>
-              </div>
-              <code className="text-[11px] text-slate-300 block select-all font-mono">
-                {HERO_DATA.pgpKeyId}
-              </code>
-              <p className="text-[10px] text-slate-500 font-sans">
-                Commits and releases are cryptographically signed.
-              </p>
-            </div>
+            <a
+              href={HERO_DATA.socialLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm transition-all border border-slate-700"
+            >
+              <Linkedin className="w-4 h-4 text-sky-400" />
+              <span>LinkedIn</span>
+              <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+            </a>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
-          <div className="flex items-center gap-2 text-slate-500 text-[11px]">
-            <GitCommit className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Deployment Target: GitHub Pages (`safeer-hussain.github.io`)</span>
+        {/* Footer Bottom Bar */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-800 text-xs">
+          <div className="flex items-center gap-2 text-slate-500">
+            <span className="font-semibold text-slate-400">{HERO_DATA.name}</span>
+            <span>·</span>
+            <span>System Architect & App Engineer</span>
           </div>
 
-          <button
-            onClick={scrollToTop}
-            type="button"
-            className="flex items-center gap-1.5 py-1.5 px-3 rounded bg-slate-900 border border-slate-800 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors text-slate-300"
-          >
-            <span>Back to Top</span>
-            <ArrowUp className="w-3.5 h-3.5" />
-          </button>
+          <div className="flex items-center gap-6">
+            <a
+              href={HERO_DATA.socialLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors flex items-center gap-1.5"
+            >
+              <Github className="w-4 h-4" />
+              <span>GitHub</span>
+            </a>
+            <a
+              href={HERO_DATA.socialLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors flex items-center gap-1.5"
+            >
+              <Linkedin className="w-4 h-4" />
+              <span>LinkedIn</span>
+            </a>
+            <button
+              onClick={scrollToTop}
+              type="button"
+              className="hover:text-white transition-colors flex items-center gap-1.5 ml-2"
+              title="Scroll to top"
+            >
+              <span>Back to Top</span>
+              <ArrowUp className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
       </div>
     </footer>

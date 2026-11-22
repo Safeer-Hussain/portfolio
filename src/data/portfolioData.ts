@@ -11,14 +11,13 @@ import {
 export const HERO_DATA = {
   name: 'Safeer Hussain',
   callsign: 'SH-ARCH-01',
+  roleTag: 'System Architect & App Engineer',
   role: 'System Architect & App Engineer',
-  specialization: 'AI, Cybersecurity & Cloud/DevOps',
-  headline: 'System Architect & App Engineer | AI, Cybersecurity & Cloud/DevOps',
-  subheadline: 'Designing resilient, offline-first systems, cross-platform mobile ecosystems, native hardware bridges, security-minded architectures, and automated CI/CD release pipelines.',
-  bio: 'Specializing in deterministic state engineering, sub-second cold starts, cryptographic document sealing, and production Dart/Flutter multi-platform engines. Proven record leading mobile architectural pivots from monolithic codebases to modular, test-covered Clean Architectures serving enterprise scale.',
+  headline: 'Designing resilient products, intelligent systems, and scalable mobile ecosystems.',
+  subheadline: '3.5+ years leading end-to-end architecture across 15 production applications and 5 open-source packages—bridging AI, cybersecurity, and automated cloud delivery.',
   location: 'Lahore, Pakistan',
   timeZone: 'GMT+05:00',
-  currentAvailability: 'Open for Architecture Advisory & Lead Engineering Engagements',
+  availability: 'Open for Architecture Advisory & Lead Engineering Roles',
   pgpKeyId: '0x8F4E29C17D3A6B05',
   socialLinks: {
     github: 'https://github.com/Safeer-Hussain',
@@ -33,8 +32,8 @@ export const KEY_METRICS: MetricItem[] = [
   {
     id: 'apps',
     value: '15',
-    label: 'Production Architectures',
-    description: 'Mission-critical apps spanning FinTech, Telematics, Audio DSP & Healthcare'
+    label: 'Production Apps',
+    description: 'Enterprise architectures spanning FinTech, Telematics, Audio DSP & Healthcare'
   },
   {
     id: 'packages',
@@ -45,73 +44,14 @@ export const KEY_METRICS: MetricItem[] = [
   {
     id: 'experience',
     value: '3.5+',
-    label: 'Years Technical Leadership',
-    description: 'Leading distributed engineering squads, architectural reviews & CI/CD automation'
+    label: 'Yrs Leadership',
+    description: 'Directing distributed engineering squads, architectural pivots & release automation'
   },
   {
     id: 'certifications',
-    value: 'Multi-Cloud',
-    label: 'Verified Certifications',
-    description: 'Validated credentials across AI, Cybersecurity, AWS, Azure & DevOps on Credly'
-  }
-];
-
-export const ENGINEERING_PILLARS: EngineeringPillar[] = [
-  {
-    id: 'pillar-offline-clean',
-    title: 'System Architecture & Offline-First Design',
-    summary: 'Feature-first Clean Architecture, deterministic state engines, local SQLite persistence, 360dp-safe adaptive layouts, and zero-dependency modular libraries.',
-    details: [
-      'Strict separation of Presentation, Domain (Pure Dart/TS, Zero-Framework), and Data layers.',
-      'Immutable value objects with deterministic reducers, transactional Drift/SQLite caches, and optimistic UI synchronization.',
-      'Fault-tolerant offline queue with exponential backoff and idempotency keys to eliminate data loss in intermittent connectivity.',
-      'Responsive multi-window and folding-display support scaling cleanly down to 360dp mobile viewports without layout clipping.'
-    ],
-    iconName: 'Server',
-    accentColor: '#10B981',
-    techKeywords: ['Clean Architecture', 'Offline-First', 'Drift/SQLite', '360dp Adaptive', 'Pure Dart/TS', 'Event Sourcing']
-  },
-  {
-    id: 'pillar-ai-telemetry',
-    title: 'AI-Driven Workflows & Telemetry',
-    summary: 'Asynchronous LLM token streaming, intelligent copilots, adaptive SM-2 learning schedulers, and real-time sensor/biometric telemetry pipelines.',
-    details: [
-      'Backpressure-managed token streaming pipelines handling intermediate reasoning steps, markdown rendering, and cancellation tokens.',
-      'Algorithmic SuperMemo-2 (SM-2) memory decay modeling with adaptive ease factors for spaced repetition learning.',
-      'Real-time Bluetooth Low Energy (BLE) sensor telemetry parsing binary GATT streams (ECG, SpO2, Cadence, CAN-bus).',
-      'Local on-device inference with quantization fallbacks to cloud endpoints for high-throughput edge intelligence.'
-    ],
-    iconName: 'Cpu',
-    accentColor: '#06B6D4',
-    techKeywords: ['LLM Token Streaming', 'SM-2 Engine', 'BLE GATT Telemetry', 'Edge Inference', 'DSP Audio FFT', 'CAN-Bus OBD-II']
-  },
-  {
-    id: 'pillar-security-crypto',
-    title: 'Security & Cryptographic Integrity',
-    summary: 'Hardware KeyStore/Enclave biometric signing, SHA-256 & HMAC document sealing, GPG-signed commits/releases, and fault-tolerant network layers.',
-    details: [
-      'Hardware-backed asymmetric key generation via Android KeyStore (TEE/StrongBox) and iOS Secure Enclave (kSecAccessControlBiometryAny).',
-      'Cryptographic PDF statement sealing using SHA-256 digests and HMAC-SHA512 verification codes for non-repudiation.',
-      'End-to-end zero-trust transport security with dynamic TLS public key pinning and encrypted offline SQLCipher databases.',
-      'Strict cryptographic provenance: GPG-signed git commits, automated SBOM generation, and pinned dependency hashes.'
-    ],
-    iconName: 'ShieldCheck',
-    accentColor: '#10B981',
-    techKeywords: ['Android KeyStore', 'iOS Secure Enclave', 'SHA-256 / HMAC', 'Zero-Trust', 'Public Key Pinning', 'SQLCipher']
-  },
-  {
-    id: 'pillar-devops-automation',
-    title: 'Cloud, DevOps & Release Automation',
-    summary: 'End-to-end GitHub Actions CI/CD pipelines with automated static analysis gates, unit/widget test suites, and signed release artifact publishing.',
-    details: [
-      'Multi-stage matrix GitHub Actions workflows running linting, formatting, security scanning, and unit tests with >85% coverage gates.',
-      'Fastlane automated code signing, APK/AAB obfuscation via ProGuard/R8, and multi-track automated Google Play/TestFlight distribution.',
-      'Pub.dev automated package deployment pipelines adhering to Pana scoring metrics for automated 160/160 quality badges.',
-      'Dockerized build runners, SonarQube quality inspections, and immutable semantic release tagging with automated changelog generation.'
-    ],
-    iconName: 'GitMerge',
-    accentColor: '#06B6D4',
-    techKeywords: ['GitHub Actions', 'Fastlane Automation', 'Pana 160/160', 'Static Analysis Gates', 'SonarCloud', 'Semantic Releases']
+    value: 'Verified',
+    label: 'AI, Security & Cloud Certified',
+    description: 'Validated credentials across AWS, Azure, ISC2 Cybersecurity & DeepLearning.AI'
   }
 ];
 
@@ -165,10 +105,9 @@ export const OPEN_SOURCE_PACKAGES: OpenSourcePackage[] = [
     codeSnippet: `final scheduler = const Sm2Scheduler();
 final initialCard = Sm2Card.initial();
 
-// User evaluated recall quality (0 = blackout, 5 = perfect recall)
 final reviewResult = scheduler.evaluate(
   card: initialCard,
-  quality: ReviewQuality.good, // 4
+  quality: ReviewQuality.good,
   reviewDate: DateTime.now(),
 );
 
@@ -187,7 +126,7 @@ print('Updated Ease Factor: \${reviewResult.easeFactor}');`
     githubUrl: 'https://github.com/Safeer-Hussain/token_stream_controller',
     installCommand: 'dart pub add token_stream_controller',
     keyFeatures: [
-      'Dual-channel emission: separates <think>...</think> reasoning traces from consumer tokens',
+      'Dual-channel emission: separates <thought>...</thought> reasoning traces from consumer tokens',
       'Adaptive buffer throttling to prevent 60fps/120fps UI frame drops during high-speed LLM bursts',
       'Robust stream cancellation with deterministic onDone and onCancel disposal lifecycle',
       'Pure Dart with 100% test coverage and zero third-party dependencies'
@@ -229,7 +168,7 @@ await controller.pipeFromHttpStream(openAiSseStream);`
 dio.interceptors.add(
   DioResilienceInterceptor(
     chaosConfig: ChaosConfig(
-      failureRate: 0.15, // 15% random network dropouts
+      failureRate: 0.15,
       simulatedLatency: const Duration(milliseconds: 280),
       jitterRangeMs: 150,
       allowedErrorCodes: [500, 503, 504],
@@ -262,9 +201,7 @@ final isInsideGeofence = GeofenceHaversine.isWithinRadius(
   center: officeCenter,
   point: userPosition,
   radiusMeters: 100.0,
-);
-
-print('Distance: \${distanceMeters.toStringAsFixed(1)}m | Authorized: \$isInsideGeofence');`
+);`
   }
 ];
 
@@ -272,20 +209,31 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'octetpulse_app',
     name: 'octetpulse_app',
-    title: 'Workforce, Payroll & VoIP Infrastructure',
-    category: 'Enterprise & Civic',
-    stateManagement: 'BLoC',
+    title: 'Workforce Operations, Payroll & Encrypted VoIP',
+    category: 'Enterprise & Operations',
+    folder: 'octetpulse',
+    screenshots: [
+      'Screenshot_20261122-223414.jpg',
+      'Screenshot_20261122-223416.jpg',
+      'Screenshot_20261122-223426.jpg',
+      'Screenshot_20261122-223428.jpg',
+      'Screenshot_20261122-223431.jpg',
+      'Screenshot_20261122-223434.jpg'
+    ],
+    stateManagement: 'BLoC (flutter_bloc)',
     nativeBridge: 'SIP/WebRTC Audio & SRTP Telemetry',
-    tagline: 'Enterprise human capital platform with biometric geofenced clock-in and carrier-grade VoIP telephony.',
-    description: 'OctetPulse is a comprehensive enterprise workforce platform delivering cryptographic attendance tracking, receipt OCR expense parsing, automated payroll ledgering, and an encrypted low-latency SIP/WebRTC VoIP dialer with an embedded AI workforce copilot.',
+    tagline: 'Enterprise workforce operations with biometric geofenced clock-in and carrier-grade encrypted VoIP telephony.',
+    valueProposition: 'All-in-one workforce suite unifying automated payroll, receipt OCR, geofenced clock-in, and SIP encrypted calling.',
+    cleanTechPills: ['Clean Architecture', 'Offline-First SQLite', 'SIP / WebRTC', 'AI Workforce Copilot'],
+    description: 'OctetPulse is a comprehensive enterprise human capital management platform delivering cryptographic attendance tracking, receipt OCR expense parsing, automated double-entry payroll ledgering, and an encrypted low-latency SIP/WebRTC VoIP dialer with an embedded AI workforce copilot.',
     keyHighlights: [
       'Geofenced clock-in engine utilizing geofence_haversine and device GPS anti-spoofing heuristics',
-      'Optical receipt OCR with edge-accelerated line item categorization and currency normalization',
+      'Optical receipt OCR with on-device line item categorization and currency normalization',
       'High-throughput double-entry payroll ledger backed by local SQLite and differential cloud sync',
       'Hardware-accelerated SIP/WebRTC VoIP stack with Opus audio codec and SRTP payload encryption',
       'AI Workforce Copilot providing instant natural language querying of company compliance policies'
     ],
-    techStack: ['Flutter', 'BLoC', 'WebRTC / SIP', 'SQLite (Drift)', 'OCR ML Kit', 'SRTP', 'Dart', 'Docker'],
+    techStack: ['Flutter', 'flutter_bloc', 'WebRTC / SIP', 'SQLite (Drift)', 'OCR ML Kit', 'SRTP', 'Dart', 'Docker'],
     architectureLayers: {
       presentation: 'Adaptive 360dp-safe responsive scaffold, animated payroll metrics, and SIP call overlay.',
       domain: 'Pure Dart payroll rules, geofence boundary validators, and VoIP connection state machines.',
@@ -303,11 +251,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'payvault_app',
     name: 'payvault_app',
-    title: 'FinTech Multi-Currency Neo-Bank',
+    title: 'Multi-Currency Neo-Bank & Treasury',
     category: 'FinTech & Commerce',
+    folder: 'payvault',
+    screenshots: [
+      'Screenshot_20261122-223704.jpg',
+      'Screenshot_20261122-223708.jpg',
+      'Screenshot_20261122-223710.jpg',
+      'Screenshot_20261122-223712.jpg',
+      'Screenshot_20261122-223714.jpg'
+    ],
     stateManagement: 'GetX + GetIt',
     nativeBridge: 'Hardware Biometric KeyStore Enclave',
     tagline: 'Multi-currency digital vault with hardware-grade cryptographic proof and tamper-evident PDF sealing.',
+    valueProposition: 'Institutional-grade neo-banking app with 5-currency FX, biometric enclave authorization, and HMAC-sealed PDF statements.',
+    cleanTechPills: ['KeyStore / Secure Enclave', 'SHA-256 / HMAC', 'Multi-Currency FX', 'Offline Vault'],
     description: 'PayVault is an institutional-grade mobile banking client featuring multi-currency sub-wallets, real-time FX spot trading, biometric transaction signing backed by Secure Enclave/KeyStore, and mathematically verified PDF bank statements sealed with SHA-256 and HMAC.',
     keyHighlights: [
       'Hardware-backed asymmetric transaction authorization via Android KeyStore and iOS Secure Enclave',
@@ -318,7 +276,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     ],
     techStack: ['Flutter', 'GetX', 'GetIt', 'Android KeyStore', 'iOS Secure Enclave', 'HMAC-SHA512', 'PDF Engine', 'Biometrics'],
     architectureLayers: {
-      presentation: 'High-contrast banking terminal UI, biometric biometric prompt sheet, and real-time FX ticker.',
+      presentation: 'High-contrast banking terminal UI, biometric prompt sheet, and real-time FX ticker.',
       domain: 'Double-entry accounting equations, fixed-point monetary math, and key generation contracts.',
       data: 'SQLCipher AES-256 encrypted local ledger with audit logging and public-key pinned REST/gRPC client.',
       hardware: 'Hardware TEE/StrongBox biometric auth, camera QR engine, and secure clipboard purger.'
@@ -334,17 +292,28 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'fitone_app',
     name: 'fitone_app',
-    title: 'AI Fitness & Biometrics Telemetry',
-    category: 'Health & Lifestyle',
+    title: 'AI Fitness & Biometric Coaching',
+    category: 'AI & Health',
+    folder: 'fitone',
+    screenshots: [
+      'Screenshot_20261122-215435.jpg',
+      'Screenshot_20261122-215442.jpg',
+      'Screenshot_20261122-215445.jpg',
+      'Screenshot_20261122-215454.jpg',
+      'Screenshot_20261122-215459.jpg',
+      'Screenshot_20261122-215505.jpg'
+    ],
     stateManagement: 'MobX + GetIt',
     nativeBridge: 'BLE Heart-Rate & Cadence Stream',
     tagline: 'Real-time athletic telemetry engine integrating Bluetooth Low Energy wearables and adaptive workout progression.',
+    valueProposition: 'Intelligent conditioning suite streaming 10Hz BLE biometric sensor feeds with on-device progressive overload algorithms.',
+    cleanTechPills: ['BLE GATT Telemetry', 'AI Coach', 'Periodization Builder', '60fps Canvas HUD'],
     description: 'FitOne ingests continuous high-frequency binary GATT telemetry from smart heart-rate monitors and cycling sensors. An on-device AI coach calculates real-time aerobic zone thresholds, progressive overload algorithms, and macronutrient metabolic targets.',
     keyHighlights: [
       'Bluetooth Low Energy (BLE) GATT client parsing binary telemetry packets at 10Hz without UI thread stalls',
       'Dynamic heart rate zone alerting (Zone 1-5) with haptic feedback thresholds',
       'Automated progressive overload calculation engine scheduling training volume and deload weeks',
-      'Offline nutritional macronutrient ledger with barcode scanner integration and Micronutrient tracking',
+      'Offline nutritional macronutrient ledger with barcode scanner integration and micronutrient tracking',
       'On-device AI coach providing real-time workout adjustment suggestions based on heart rate recovery (HRR)'
     ],
     techStack: ['Flutter', 'MobX', 'GetIt', 'Bluetooth Low Energy (GATT)', 'Fast Fourier Transform', 'SQLite', 'Haptics'],
@@ -365,11 +334,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'openpro_app',
     name: 'openpro_app',
-    title: 'B2B Service & Escrow Marketplace',
-    category: 'Enterprise & Civic',
+    title: 'B2B Talent Network & Milestone Escrow',
+    category: 'Enterprise & Operations',
+    folder: 'openpro',
+    screenshots: [
+      'Screenshot_20261122-224542.jpg',
+      'Screenshot_20261122-224548.jpg',
+      'Screenshot_20261122-224550.jpg',
+      'Screenshot_20261122-224551.jpg',
+      'Screenshot_20261122-224553.jpg'
+    ],
     stateManagement: 'Provider + GetIt',
     nativeBridge: 'Biometric Escrow Signing',
     tagline: 'Milestone-based procurement and service marketplace with biometric escrow locking and SLA tracking.',
+    valueProposition: 'B2B contract marketplace with milestone escrow locking, biometric contract release, and smart candidate matching.',
+    cleanTechPills: ['Milestone Escrow', 'Biometric Signing', 'Smart Job Matching', 'SLA Enforcement'],
     description: 'OpenPro structures enterprise contractor agreements into immutable verifiable milestones. Funds are locked into smart escrow vaults and released only upon cryptographic biometric verification and verified SLA compliance metrics.',
     keyHighlights: [
       'Biometric cryptographic signing for milestone creation, scope approval, and fund release',
@@ -396,12 +375,23 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'agoramarket_app',
     name: 'agoramarket_app',
-    title: 'Video-First Talent & Quick Commerce',
+    title: 'Video-First Service & Quick Commerce',
     category: 'FinTech & Commerce',
+    folder: 'agoramarket',
+    screenshots: [
+      'Screenshot_20261122-180222.jpg',
+      'Screenshot_20261122-180231.jpg',
+      'Screenshot_20261122-180236.jpg',
+      'Screenshot_20261122-180244.jpg',
+      'Screenshot_20261122-180252.jpg',
+      'Screenshot_20261122-180349.jpg'
+    ],
     stateManagement: 'Riverpod + GetIt',
     nativeBridge: 'Geofence & Thermal POS Bridge',
     tagline: 'High-speed vertical video marketplace blending live talent booking, local POS receipts, and multi-cart checkout.',
-    description: 'AgoraMarket combines TikTok-style vertical video reels with instant commerce checkout, spatial merchant discovery, ESCROW negotiation, and direct hardware communication with Bluetooth thermal POS receipt printers.',
+    valueProposition: 'Interactive social commerce app combining low-latency short-form video reels, geospatial merchant discovery, and split checkout.',
+    cleanTechPills: ['Video Cache Preload', 'Geospatial Discovery', 'Multi-Cart Split', 'Thermal POS Bridge'],
+    description: 'AgoraMarket combines short-form vertical video reels with instant commerce checkout, spatial merchant discovery, ESCROW negotiation, and direct hardware communication with Bluetooth thermal POS receipt printers.',
     keyHighlights: [
       'Zero-lag vertical video prefetching pipeline caching video chunks ahead of scroll gestures',
       'Multi-merchant split checkout cart calculating individual tax, delivery, and escrow allocations',
@@ -427,11 +417,22 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'cityzens_app',
     name: 'cityzens_app',
-    title: 'Smart City & Civic Ops Platform',
-    category: 'Enterprise & Civic',
+    title: 'Smart City & Civic Operations',
+    category: 'Enterprise & Operations',
+    folder: 'cityzens',
+    screenshots: [
+      'Screenshot_20261122-181102.jpg',
+      'Screenshot_20261122-181109.jpg',
+      'Screenshot_20261122-181115.jpg',
+      'Screenshot_20261122-181119.jpg',
+      'Screenshot_20261122-181123.jpg',
+      'Screenshot_20261122-181128.jpg'
+    ],
     stateManagement: 'Provider + GetIt',
     nativeBridge: 'Environmental & Transit Telemetry',
     tagline: 'Geotagged civic grievance reporting, neighborhood alerts, and real-time public transit tracking.',
+    valueProposition: 'Municipal intelligence platform with offline geotagged hazard reporting, local civic voting, and live transit arrivals.',
+    cleanTechPills: ['Offline Outbox', 'GTFS Transit Streams', 'Geotagged Incident Map', 'Civic Polls'],
     description: 'CityZens connects municipal governments with citizens. Features offline-first geotagged photo reporting for urban infrastructure hazards, community voting polls with zero-knowledge verification, and live GTFS transit telemetry.',
     keyHighlights: [
       'Offline-first civic incident capture with camera geotagging and background sync when cellular connects',
@@ -458,11 +459,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'golfer_app',
     name: 'golfer_app',
-    title: 'Golf Rangefinder & Telemetry Suite',
-    category: 'Health & Lifestyle',
+    title: 'Golf Rangefinder & Telemetry',
+    category: 'Smart Living & Lifestyle',
+    folder: 'golfer',
+    screenshots: [
+      'Screenshot_20261122-224701.jpg',
+      'Screenshot_20261122-224704.jpg',
+      'Screenshot_20261122-224707.jpg',
+      'Screenshot_20261122-224710.jpg',
+      'Screenshot_20261122-224712.jpg'
+    ],
     stateManagement: 'MobX + GetIt',
     nativeBridge: 'IMU Swing Tempo & Wind Bridge',
     tagline: 'WHS handicap analytics, IMU sensor swing tempo tracking, and vector course yardage mapping.',
+    valueProposition: 'Digital caddie tool computing 100Hz IMU swing tempo ratios, slope-adjusted pin yardages, and official WHS handicaps.',
+    cleanTechPills: ['IMU Sensor Fusion', 'Haversine Rangefinder', 'WHS Handicap Engine', 'Club Gapping'],
     description: 'Golfer delivers professional caddie capabilities to smartphones. Ingests 100Hz IMU accelerometer and gyroscope sensor telemetry to calculate backswing-to-downswing tempo ratios, computes slope-adjusted Haversine pin distances, and maintains official World Handicap System (WHS) differentials.',
     keyHighlights: [
       'IMU sensor fusion processing accelerometer/gyroscope vectors to score 3:1 swing tempo ratios',
@@ -489,11 +500,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'vitalis_app',
     name: 'vitalis_app',
-    title: 'Telemedicine & Clinical Diagnostics',
-    category: 'Health & Lifestyle',
+    title: 'Telemedicine & Clinical Biometrics',
+    category: 'AI & Health',
+    folder: 'vitalis',
+    screenshots: [
+      'Screenshot_20261122-224053.jpg',
+      'Screenshot_20261122-224055.jpg',
+      'Screenshot_20261122-224057.jpg',
+      'Screenshot_20261122-224058.jpg',
+      'Screenshot_20261122-224100.jpg'
+    ],
     stateManagement: 'Riverpod',
     nativeBridge: 'BLE Blood Pressure, CGM & SpO2',
     tagline: 'Clinical telemetry hub pairing with certified medical monitors, AI triage, and emergency Medical ID.',
+    valueProposition: 'HIPAA-grade telemedicine application integrating IEEE 11073 Bluetooth medical vitals with WebRTC clinical consults.',
+    cleanTechPills: ['IEEE 11073 BLE', 'WebRTC Encrypted Video', 'AI Emergency Triage', 'Medical ID Vault'],
     description: 'Vitalis is an enterprise telemedicine client built to clinical accuracy standards. Ingests continuous telemetry from Bluetooth Low Energy medical devices (continuous glucose monitors, blood pressure cuffs, pulse oximeters) and executes on-device AI emergency triage.',
     keyHighlights: [
       'Bluetooth SIG Medical Profile parsers for IEEE 11073 standard clinical blood pressure, SpO2, and glucose',
@@ -520,11 +541,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'fleetroute_app',
     name: 'fleetroute_app',
-    title: 'Autonomous Fleet Telematics & Logistics',
-    category: 'Enterprise & Civic',
-    stateManagement: 'BLoC',
+    title: 'Autonomous Fleet & Route Optimization',
+    category: 'Enterprise & Operations',
+    folder: 'fleetroute',
+    screenshots: [
+      'Screenshot_20261122-215312.jpg',
+      'Screenshot_20261122-215315.jpg',
+      'Screenshot_20261122-215324.jpg',
+      'Screenshot_20261122-215328.jpg',
+      'Screenshot_20261122-215332.jpg'
+    ],
+    stateManagement: 'BLoC (flutter_bloc)',
     nativeBridge: 'OBD-II CAN-Bus & DTC Diagnostics',
     tagline: 'Heavy vehicle telematics suite with CAN-bus vehicle diagnostic bridge and electronic proof-of-delivery.',
+    valueProposition: 'Logistics fleet console pairing OBD-II CAN-Bus hardware diagnostics with multi-stop route optimization and touch ePOD.',
+    cleanTechPills: ['OBD-II CAN-Bus', 'Multi-Stop TSP Routing', 'ePOD Vector Signature', 'Driver Telemetry'],
     description: 'FleetRoute equips enterprise logistics fleets with real-time OBD-II CAN-bus telemetry, automated Diagnostic Trouble Code (DTC) reading, dynamic multi-stop Haversine route optimization, and touch-drawn electronic proof of delivery (ePOD) with offline signature sealing.',
     keyHighlights: [
       'ELM327 Bluetooth/WiFi bridge parsing SAE J1979 OBD-II PIDs (fuel rate, engine RPM, coolant temp, DTCs)',
@@ -551,11 +582,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'nexushome_app',
     name: 'nexushome_app',
-    title: 'Smart Home & Solar Grid Controller',
-    category: 'AI & Telemetry',
+    title: 'Smart Home & Solar Grid Automation',
+    category: 'Smart Living & Lifestyle',
+    folder: 'nexushome',
+    screenshots: [
+      'Screenshot_20261122-222952.jpg',
+      'Screenshot_20261122-223001.jpg',
+      'Screenshot_20261122-223004.jpg',
+      'Screenshot_20261122-223008.jpg',
+      'Screenshot_20261122-223012.jpg'
+    ],
     stateManagement: 'Riverpod',
     nativeBridge: 'Matter/Thread Mesh & Smart Meter',
     tagline: 'Residential energy management platform orchestrating Matter/Thread smart home devices and solar-to-battery power flow.',
+    valueProposition: 'IoT energy console coordinating Matter/Thread mesh topologies with real-time solar-to-battery flow diagrams.',
+    cleanTechPills: ['Matter / Thread Mesh', 'Local Rule Automation', 'Dynamic Energy Flow', 'CustomPainter Canvas'],
     description: 'NexusHome models the residential IoT ecosystem as an interactive mesh network canvas. Interfaces with smart solar inverters and grid battery controllers to optimize electrical consumption against dynamic time-of-use tariffs.',
     keyHighlights: [
       'Interactive 60fps custom painter rendering real-time Matter/Thread device mesh network topologies',
@@ -582,11 +623,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'estateview_app',
     name: 'estateview_app',
-    title: 'PropTech & Spatial Architectural Tours',
-    category: 'Enterprise & Civic',
-    stateManagement: 'BLoC',
+    title: 'PropTech & Spatial Floorplan Tours',
+    category: 'Smart Living & Lifestyle',
+    folder: 'estateview',
+    screenshots: [
+      'Screenshot_20261122-213233.jpg',
+      'Screenshot_20261122-213258.jpg',
+      'Screenshot_20261122-213302.jpg',
+      'Screenshot_20261122-213304.jpg',
+      'Screenshot_20261122-213306.jpg'
+    ],
+    stateManagement: 'BLoC (flutter_bloc)',
     nativeBridge: 'ARCore/ARKit Room Polygon Scanner',
     tagline: 'Augmented reality architectural scanner generating 3D floorplan polygons, amenity radii, and investment ROI models.',
+    valueProposition: 'Spatial real estate platform generating vector floorplans via ARCore/ARKit with 360 virtual tours and ROI models.',
+    cleanTechPills: ['ARCore / ARKit Scanner', '360 Virtual Hotspots', 'Amenity Radius Engine', 'Mortgage Studio'],
     description: 'EstateView empowers real estate professionals and buyers with mobile spatial computing. Utilizing ARCore and ARKit plane detection, the app measures wall dimensions, generates vector 2D/3D floorplans, and computes comprehensive multi-decade mortgage and rental yield ROI matrices.',
     keyHighlights: [
       'ARCore / ARKit plane detection allowing users to mark room vertices and generate scaled vector floorplans',
@@ -613,11 +664,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'voyageai_app',
     name: 'voyageai_app',
-    title: 'AI Expedition & Travel Vault',
-    category: 'AI & Telemetry',
+    title: 'AI Expedition & Travel Companion',
+    category: 'Smart Living & Lifestyle',
+    folder: 'voyageai',
+    screenshots: [
+      'Screenshot_20261122-224253.jpg',
+      'Screenshot_20261122-224317.jpg',
+      'Screenshot_20261122-224331.jpg',
+      'Screenshot_20261122-224337.jpg',
+      'Screenshot_20261122-224339.jpg'
+    ],
     stateManagement: 'GetX + GetIt',
     nativeBridge: 'Barometric Altimeter & Compass',
     tagline: 'Offline backcountry travel intelligence with barometric altimeter HUD, multi-currency tip split, and travel vault.',
+    valueProposition: 'Zero-connectivity travel suite featuring barometric elevation sensors, offline FX conversions, and PKPASS vaults.',
+    cleanTechPills: ['100% Offline Vault', 'Barometer & Compass HUD', 'Multi-Currency Splitter', 'PKPass Support'],
     description: 'VoyageAI is designed for remote globetrotters and backcountry expeditions where cellular towers do not exist. Bundles offline street-rate currency converters, barometric pressure altimeter altitude tracking, digital compass navigation, and a secure passport and boarding pass vault.',
     keyHighlights: [
       'Hardware barometric sensor calibration calculating barometric altitude and storm pressure drop warnings',
@@ -644,11 +705,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'echostream_app',
     name: 'echostream_app',
-    title: 'Lossless Spatial Audio Studio',
-    category: 'AI & Telemetry',
-    stateManagement: 'BLoC',
+    title: 'Lossless Spatial Audio & Podcast Studio',
+    category: 'Smart Living & Lifestyle',
+    folder: 'echostream',
+    screenshots: [
+      'Screenshot_20261122-212603.jpg',
+      'Screenshot_20261122-212608.jpg',
+      'Screenshot_20261122-212612.jpg',
+      'Screenshot_20261122-212617.jpg',
+      'Screenshot_20261122-212622.jpg'
+    ],
+    stateManagement: 'BLoC (flutter_bloc)',
     nativeBridge: '10-Band Parametric DSP & 32-Band FFT',
     tagline: 'Audiophile playback engine with 32-band Fast Fourier Transform spectrum analyzer and custom DSP equalizers.',
+    valueProposition: 'High-fidelity audio platform with sub-10ms native C++ DSP equalizers, 32-band real-time FFT spectrum, and FLAC support.',
+    cleanTechPills: ['Native C++ DSP Engine', '32-Band FFT Spectrum', 'Gapless FLAC Audio', 'Offline Podcast Cache'],
     description: 'EchoStream delivers studio-grade audio processing directly on mobile hardware. Incorporates a real-time 32-band Fast Fourier Transform (FFT) visualizer, a 10-band parametric digital signal processor (DSP) equalizer, gapless playback buffers, and offline FLAC caching.',
     keyHighlights: [
       'Native C++ DSP audio processing bridge delivering sub-10ms audio latency and 10-band IIR equalization',
@@ -675,11 +746,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'omnicart_app',
     name: 'omnicart_app',
-    title: '15-Minute Retail & POS Terminal',
+    title: '15-Min Quick Retail & POS Terminal',
     category: 'FinTech & Commerce',
+    folder: 'omnicart',
+    screenshots: [
+      'Screenshot_20261122-223225.jpg',
+      'Screenshot_20261122-223227.jpg',
+      'Screenshot_20261122-223259.jpg',
+      'Screenshot_20261122-223301.jpg',
+      'Screenshot_20261122-223302.jpg'
+    ],
     stateManagement: 'Riverpod',
     nativeBridge: 'Optical UPC Barcode & NFC Tap POS',
     tagline: 'High-frequency retail checkout terminal featuring camera barcode batching, NFC payments, and live courier telemetry.',
+    valueProposition: 'Ultrafast retail checkout terminal with continuous camera barcode batching, contactless NFC tap, and courier tracking.',
+    cleanTechPills: ['ML Kit Barcode Batching', 'NFC Contactless POS', 'Live Courier Radar', 'Offline Cash Register'],
     description: 'OmniCart powers ultra-fast localized retail fulfillment. Transforms standard Android/iOS smartphones into high-throughput point-of-sale terminals capable of optical UPC batch scanning, NFC tap payment capture, and live 15-minute delivery fleet tracking.',
     keyHighlights: [
       'High-speed optical camera barcode scanner processing up to 3 barcodes per second in continuous inventory mode',
@@ -706,11 +787,21 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
   {
     id: 'skillforge_app',
     name: 'skillforge_app',
-    title: 'EdTech & Code Execution Sandbox',
-    category: 'AI & Telemetry',
-    stateManagement: 'BLoC',
+    title: 'Adaptive EdTech & Code Sandbox',
+    category: 'AI & Health',
+    folder: 'skillforge',
+    screenshots: [
+      'Screenshot_20261122-223533.jpg',
+      'Screenshot_20261122-223538.jpg',
+      'Screenshot_20261122-223541.jpg',
+      'Screenshot_20261122-223543.jpg',
+      'Screenshot_20261122-223546.jpg'
+    ],
+    stateManagement: 'BLoC (flutter_bloc)',
     nativeBridge: 'Native AST Code Runner & Focus Timer',
     tagline: 'Interactive programming environment with on-device Dart AST parsing, SM-2 retention flashcards, and Socratic AI.',
+    valueProposition: 'Mobile developer learning studio with on-device Dart AST code runner, SM-2 retention flashcards, and streaming AI mentor.',
+    cleanTechPills: ['On-Device AST Sandbox', 'SM-2 Memory Retention', 'Token Streaming AI', 'Distraction-Free Focus'],
     description: 'SkillForge provides a mobile developer learning playground. Features a sandboxed on-device Dart abstract syntax tree (AST) code interpreter, interactive coding exercises, SuperMemo-2 (SM-2) memory retention flashcards, and an asynchronous LLM token-streaming Socratic coding tutor.',
     keyHighlights: [
       'Integrated token_stream_controller streaming AI reasoning traces and code feedback without UI blocking',
@@ -733,6 +824,65 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     ],
     githubUrl: 'https://github.com/Safeer-Hussain/skillforge_app',
     releasesUrl: 'https://github.com/Safeer-Hussain/skillforge_app/releases'
+  }
+];
+
+export const ENGINEERING_PILLARS: EngineeringPillar[] = [
+  {
+    id: 'pillar-offline-clean',
+    title: 'System Architecture & Offline-First Engineering',
+    summary: 'Feature-first Clean Architecture, deterministic state machines, local SQLite persistence, and zero-dependency modular libraries.',
+    details: [
+      'Strict separation of Presentation, Domain (Pure Dart/TS), and Data layers.',
+      'Immutable value objects with deterministic reducers, transactional Drift/SQLite caches, and optimistic UI synchronization.',
+      'Fault-tolerant offline queue with exponential backoff and idempotency keys to eliminate data loss in intermittent connectivity.',
+      'Responsive multi-window and folding-display support scaling cleanly down to 360dp mobile viewports without layout clipping.'
+    ],
+    iconName: 'Server',
+    accentColor: '#0ea5e9',
+    techKeywords: ['Clean Architecture', 'Offline-First', 'Drift / SQLite', '360dp Adaptive', 'Pure Dart / TS', 'Event Sourcing']
+  },
+  {
+    id: 'pillar-ai-telemetry',
+    title: 'AI Workflows & Real-Time Telemetry',
+    summary: 'Asynchronous LLM token streaming, intelligent copilots, adaptive SM-2 learning schedulers, and real-time sensor pipelines.',
+    details: [
+      'Backpressure-managed token streaming pipelines handling intermediate reasoning steps, markdown rendering, and cancellation tokens.',
+      'Algorithmic SuperMemo-2 (SM-2) memory decay modeling with adaptive ease factors for spaced repetition learning.',
+      'Real-time Bluetooth Low Energy (BLE) sensor telemetry parsing binary GATT streams (ECG, SpO2, Cadence, CAN-bus).',
+      'Local on-device inference with quantization fallbacks to cloud endpoints for high-throughput edge intelligence.'
+    ],
+    iconName: 'Cpu',
+    accentColor: '#10b981',
+    techKeywords: ['LLM Token Streaming', 'SM-2 Engine', 'BLE GATT Telemetry', 'Edge Inference', 'DSP Audio FFT', 'CAN-Bus OBD-II']
+  },
+  {
+    id: 'pillar-security-crypto',
+    title: 'Cybersecurity & Cryptographic Integrity',
+    summary: 'Hardware KeyStore/Enclave biometric signing, SHA-256 & HMAC document sealing, GPG-signed releases, and zero-trust security.',
+    details: [
+      'Hardware-backed asymmetric key generation via Android KeyStore (TEE/StrongBox) and iOS Secure Enclave.',
+      'Cryptographic PDF statement sealing using SHA-256 digests and HMAC-SHA512 verification codes for non-repudiation.',
+      'End-to-end zero-trust transport security with dynamic TLS public key pinning and encrypted offline SQLCipher databases.',
+      'Strict cryptographic provenance: GPG-signed git commits, automated SBOM generation, and pinned dependency hashes.'
+    ],
+    iconName: 'ShieldCheck',
+    accentColor: '#6366f1',
+    techKeywords: ['Android KeyStore', 'iOS Secure Enclave', 'SHA-256 / HMAC', 'Zero-Trust', 'Public Key Pinning', 'SQLCipher']
+  },
+  {
+    id: 'pillar-devops-automation',
+    title: 'Cloud, DevOps & Automated CI/CD Pipelines',
+    summary: 'End-to-end GitHub Actions CI/CD pipelines with automated static analysis gates, unit/widget test suites, and signed releases.',
+    details: [
+      'Multi-stage matrix GitHub Actions workflows running linting, formatting, security scanning, and unit tests with >85% coverage gates.',
+      'Fastlane automated code signing, APK/AAB obfuscation via ProGuard/R8, and multi-track automated Google Play/TestFlight distribution.',
+      'Pub.dev automated package deployment pipelines adhering to Pana scoring metrics for automated 160/160 quality badges.',
+      'Dockerized build runners, SonarQube quality inspections, and immutable semantic release tagging with automated changelog generation.'
+    ],
+    iconName: 'GitMerge',
+    accentColor: '#f59e0b',
+    techKeywords: ['GitHub Actions', 'Fastlane Automation', 'Pana 160/160', 'Static Analysis Gates', 'SonarCloud', 'Semantic Releases']
   }
 ];
 
@@ -891,12 +1041,4 @@ export const CERTIFICATIONS: Certification[] = [
     skills: ['GitHub Actions Workflows', 'Docker Containerization', 'Automated Testing Gates', 'Semantic Versioning'],
     verificationId: 'CNCF-DO-4819'
   }
-];
-
-export const TERMINAL_COMMANDS = [
-  { command: 'cat /etc/profile', description: 'Outputs Safeer Hussain system profile & credentials' },
-  { command: 'pub cache list', description: 'Lists 5 open-source packages published on pub.dev' },
-  { command: 'docker ps --all', description: 'Enumerates 15 production enterprise container architectures' },
-  { command: 'gpg --verify', description: 'Verifies PGP key 0x8F4E29C17D3A6B05 & commit provenance' },
-  { command: 'netstat -an | grep 443', description: 'Validates zero-trust TLS key pinning status' }
 ];
