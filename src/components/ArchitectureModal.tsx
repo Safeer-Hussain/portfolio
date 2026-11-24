@@ -61,27 +61,27 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/70 backdrop-blur-sm animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-5xl max-h-[92vh] flex flex-col rounded-2xl bg-white dark:bg-slate-950 shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden text-slate-800 dark:text-slate-100"
+        className="relative w-full max-w-4xl max-h-[90vh] flex flex-col rounded-2xl bg-white dark:bg-slate-950 shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden text-slate-800 dark:text-slate-100"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="p-5 sm:p-6 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 flex items-start justify-between gap-4">
+        <div className="p-5 sm:p-6 border-b border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/40 flex items-start justify-between gap-4">
           <div>
-            <div className="flex items-center gap-2 mb-2 flex-wrap">
-              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-md bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20">
+            <div className="flex items-center gap-2 mb-2 flex-wrap text-xs">
+              <span className="font-semibold px-2.5 py-0.5 rounded-md bg-sky-50 dark:bg-sky-950/40 text-sky-600 dark:text-sky-400 border border-sky-200 dark:border-sky-800/60">
                 {project.category}
               </span>
-              <span className="text-xs font-mono text-slate-500 dark:text-slate-400 px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800">
+              <span className="font-mono text-slate-500 dark:text-slate-400 px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">
                 {project.stateManagement}
               </span>
-              <span className="text-xs font-mono text-slate-500 dark:text-slate-400 px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800">
+              <span className="font-mono text-slate-500 dark:text-slate-400 px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">
                 {project.nativeBridge}
               </span>
             </div>
 
-            <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
               {project.title}
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
@@ -92,7 +92,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
           <button
             onClick={onClose}
             type="button"
-            className="p-2 rounded-xl bg-slate-200/60 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors shrink-0"
+            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors shrink-0"
             aria-label="Close Case Study Modal"
           >
             <X className="w-5 h-5" />
@@ -100,7 +100,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
         </div>
 
         {/* Modal Navigation Tabs */}
-        <div className="flex items-center gap-2 px-6 pt-3 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-semibold overflow-x-auto scrollbar-none">
+        <div className="flex items-center gap-2 px-6 pt-2 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-xs font-semibold overflow-x-auto scrollbar-none">
           <button
             onClick={() => setActiveTab('screens')}
             className={`pb-3 px-3 border-b-2 transition-colors flex items-center gap-1.5 ${
@@ -110,7 +110,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
             }`}
           >
             <Smartphone className="w-3.5 h-3.5" />
-            <span>UI Screenshots & Gallery ({screenshots.length})</span>
+            <span>UI Screenshots ({screenshots.length})</span>
           </button>
 
           <button
@@ -122,7 +122,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
             }`}
           >
             <Layers className="w-3.5 h-3.5" />
-            <span>4-Tier Architecture Blueprint</span>
+            <span>Architecture Blueprint</span>
           </button>
 
           <button
@@ -134,7 +134,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
             }`}
           >
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Highlights & Performance Metrics</span>
+            <span>Highlights & Stack</span>
           </button>
         </div>
 
@@ -143,14 +143,14 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
           {activeTab === 'screens' && (
             <div className="space-y-6">
               {/* Interactive High-Res Screen Showcase */}
-              <div className="relative rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-6 flex flex-col items-center justify-center min-h-[380px]">
+              <div className="relative rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 p-6 flex flex-col items-center justify-center min-h-[360px]">
                 {/* Phone Frame */}
-                <div className="relative w-[220px] sm:w-[260px] aspect-[9/18.5] rounded-[28px] p-2.5 bg-slate-900 dark:bg-slate-950 shadow-2xl border-2 border-slate-300 dark:border-slate-700 overflow-hidden">
-                  <div className="absolute top-3 left-1/2 -translate-x-1/2 w-14 h-4 bg-slate-900 dark:bg-slate-950 rounded-full z-20 flex items-center justify-center">
+                <div className="relative w-[210px] sm:w-[240px] aspect-[9/18.5] rounded-[24px] p-2 bg-slate-900 dark:bg-slate-950 shadow-xl border border-slate-300 dark:border-slate-700 overflow-hidden">
+                  <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-12 h-3.5 bg-slate-900 dark:bg-slate-950 rounded-full z-20 flex items-center justify-center">
                     <span className="w-1.5 h-1.5 rounded-full bg-slate-700 inline-block" />
                   </div>
 
-                  <div className="w-full h-full rounded-[20px] overflow-hidden bg-slate-900 flex items-center justify-center">
+                  <div className="w-full h-full rounded-[18px] overflow-hidden bg-slate-900 flex items-center justify-center">
                     {screenshots.length > 0 && (
                       <img
                         src={getScreenshotUrl(screenshots[activeScreenIndex])}
@@ -167,7 +167,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
                     <button
                       onClick={handlePrevScreen}
                       type="button"
-                      className="absolute left-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow-md border border-slate-200 dark:border-slate-700 hover:bg-sky-50 dark:hover:bg-slate-700 hover:text-sky-600 transition-all"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow border border-slate-200 dark:border-slate-700 hover:text-sky-600 transition-all"
                       aria-label="Previous screenshot"
                     >
                       <ChevronLeft className="w-5 h-5" />
@@ -176,7 +176,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
                     <button
                       onClick={handleNextScreen}
                       type="button"
-                      className="absolute right-4 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow-md border border-slate-200 dark:border-slate-700 hover:bg-sky-50 dark:hover:bg-slate-700 hover:text-sky-600 transition-all"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 shadow border border-slate-200 dark:border-slate-700 hover:text-sky-600 transition-all"
                       aria-label="Next screenshot"
                     >
                       <ChevronRight className="w-5 h-5" />
@@ -187,15 +187,15 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
 
               {/* Thumbnails Strip */}
               {screenshots.length > 1 && (
-                <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-none">
+                <div className="flex items-center gap-2.5 overflow-x-auto pb-2 scrollbar-none">
                   {screenshots.map((s, idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveScreenIndex(idx)}
                       type="button"
-                      className={`relative w-16 h-28 rounded-xl overflow-hidden border-2 transition-all shrink-0 ${
+                      className={`relative w-14 h-24 rounded-lg overflow-hidden border transition-all shrink-0 ${
                         idx === activeScreenIndex 
-                          ? 'border-sky-500 scale-105 shadow-md' 
+                          ? 'border-sky-500 ring-2 ring-sky-500/30' 
                           : 'border-slate-200 dark:border-slate-800 opacity-60 hover:opacity-100'
                       }`}
                     >
@@ -210,7 +210,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
               )}
 
               {/* Product Overview Summary */}
-              <div className="p-5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 space-y-1.5">
                 <h4 className="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider">
                   Product Overview & Problem Space
                 </h4>
@@ -222,43 +222,43 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
           )}
 
           {activeTab === 'blueprint' && (
-            <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div className="space-y-3.5">
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 space-y-1.5">
                 <div className="flex items-center gap-2 text-sky-600 dark:text-sky-400 font-semibold text-xs uppercase tracking-wider">
-                  <Terminal className="w-4 h-4" />
+                  <Terminal className="w-3.5 h-3.5" />
                   <span>1. Presentation Layer (360dp-Safe Adaptive UI)</span>
                 </div>
-                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm pl-6 border-l-2 border-sky-500/40">
+                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm pl-5 border-l-2 border-sky-500/40">
                   {project.architectureLayers.presentation}
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 space-y-1.5">
                 <div className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-semibold text-xs uppercase tracking-wider">
-                  <Layers className="w-4 h-4" />
+                  <Layers className="w-3.5 h-3.5" />
                   <span>2. Domain Layer (Pure Business Rules & State Engine)</span>
                 </div>
-                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm pl-6 border-l-2 border-emerald-500/40">
+                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm pl-5 border-l-2 border-emerald-500/40">
                   {project.architectureLayers.domain}
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 space-y-1.5">
                 <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold text-xs uppercase tracking-wider">
-                  <Database className="w-4 h-4" />
-                  <span>3. Data & Persistence Layer (Offline SQLite & Cryptography)</span>
+                  <Database className="w-3.5 h-3.5" />
+                  <span>3. Data & Persistence Layer (Offline SQLite & Resilience)</span>
                 </div>
-                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm pl-6 border-l-2 border-indigo-500/40">
+                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm pl-5 border-l-2 border-indigo-500/40">
                   {project.architectureLayers.data}
                 </p>
               </div>
 
-              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+              <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 space-y-1.5">
                 <div className="flex items-center gap-2 text-purple-600 dark:text-purple-400 font-semibold text-xs uppercase tracking-wider">
-                  <Cpu className="w-4 h-4" />
+                  <Cpu className="w-3.5 h-3.5" />
                   <span>4. Native Hardware Bridge & Sensors</span>
                 </div>
-                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm pl-6 border-l-2 border-purple-500/40">
+                <p className="text-slate-700 dark:text-slate-300 text-xs sm:text-sm pl-5 border-l-2 border-purple-500/40">
                   {project.architectureLayers.hardware}
                 </p>
               </div>
@@ -266,19 +266,19 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
           )}
 
           {activeTab === 'highlights' && (
-            <div className="space-y-6">
+            <div className="space-y-5">
               {project.metrics && project.metrics.length > 0 && (
                 <div>
-                  <h4 className="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-3">
-                    Validated Performance & Production Metrics
+                  <h4 className="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-2.5">
+                    Validated Production Metrics
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                     {project.metrics.map((metric, idx) => (
-                      <div key={idx} className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                        <span className="text-[11px] text-slate-500 block mb-1">
+                      <div key={idx} className="p-3 rounded-lg bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+                        <span className="text-[11px] text-slate-500 block mb-0.5">
                           {metric.label}
                         </span>
-                        <span className="text-base font-bold font-mono text-slate-900 dark:text-white">
+                        <span className="text-sm font-bold font-mono text-slate-900 dark:text-white">
                           {metric.value}
                         </span>
                       </div>
@@ -288,16 +288,14 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
               )}
 
               <div>
-                <h4 className="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-3">
-                  Key Technical Highlights & Resilience Engineering
+                <h4 className="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-2.5">
+                  Key Technical Highlights
                 </h4>
-                <div className="space-y-2.5">
+                <div className="space-y-2">
                   {project.keyHighlights.map((highlight, idx) => (
-                    <div key={idx} className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80">
+                    <div key={idx} className="flex items-start gap-2.5 p-3 rounded-lg bg-slate-50 dark:bg-slate-900/40 border border-slate-200/80 dark:border-slate-800/80 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
                       <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                      <span className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-normal">
-                        {highlight}
-                      </span>
+                      <span className="leading-relaxed">{highlight}</span>
                     </div>
                   ))}
                 </div>
@@ -307,11 +305,11 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
                 <h4 className="text-xs font-semibold text-slate-900 dark:text-white uppercase tracking-wider mb-2">
                   Complete Technology Stack
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   {project.techStack.map((tech) => (
                     <span
                       key={tech}
-                      className="text-xs font-mono px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800"
+                      className="text-xs font-mono px-2.5 py-1 rounded-md bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800"
                     >
                       {tech}
                     </span>
@@ -323,9 +321,9 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
         </div>
 
         {/* Modal Footer with External Links */}
-        <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/90 flex items-center justify-between gap-4">
-          <span className="text-xs text-slate-500 hidden sm:block">
-            Press <kbd className="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700">ESC</kbd> to exit
+        <div className="p-4 sm:p-5 border-t border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/60 flex items-center justify-between gap-4 text-xs">
+          <span className="text-slate-500 hidden sm:block">
+            Press <kbd className="px-1.5 py-0.5 rounded bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">ESC</kbd> to close
           </span>
 
           <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
@@ -333,7 +331,7 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
               href={project.releasesUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
+              className="inline-flex items-center gap-1.5 font-medium px-3.5 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
             >
               <span>Releases</span>
               <ExternalLink className="w-3.5 h-3.5" />
@@ -343,10 +341,10 @@ export const ArchitectureModal: React.FC<ArchitectureModalProps> = ({ project, o
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white transition-colors shadow-sm"
+              className="inline-flex items-center gap-1.5 font-medium px-4 py-2 rounded-lg bg-slate-900 dark:bg-white text-white dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors shadow-sm"
             >
               <Github className="w-4 h-4" />
-              <span>GitHub Repository</span>
+              <span>GitHub Repo</span>
             </a>
           </div>
         </div>

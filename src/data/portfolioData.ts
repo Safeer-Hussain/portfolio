@@ -1,6 +1,7 @@
 import { 
   ProjectArchitecture, 
   OpenSourcePackage, 
+  OpenSourceContribution,
   EngineeringPillar, 
   ArchitectureLayer, 
   Certification, 
@@ -13,15 +14,15 @@ export const HERO_DATA = {
   callsign: 'SH-ARCH-01',
   roleTag: 'System Architect & App Engineer',
   role: 'System Architect & App Engineer',
-  headline: 'Designing resilient products, intelligent systems, and scalable mobile ecosystems.',
-  subheadline: '3.5+ years leading end-to-end architecture across 15 production applications and 5 open-source packages—bridging AI, cybersecurity, and automated cloud delivery.',
+  headline: 'Designing resilient systems, mobile architectures, and developer tools.',
+  subheadline: 'System Architect & App Engineer specializing in AI, cybersecurity, cloud/DevOps, offline-first systems, and cross-platform mobile apps.',
   location: 'Lahore, Pakistan',
   timeZone: 'GMT+05:00',
   availability: 'Open for Architecture Advisory & Lead Engineering Roles',
   pgpKeyId: '0x8F4E29C17D3A6B05',
   socialLinks: {
     github: 'https://github.com/Safeer-Hussain',
-    linkedin: 'https://www.linkedin.com/in/saferhusain',
+    linkedin: 'https://www.linkedin.com/in/safer-husain',
     credly: 'https://www.credly.com/users/safer-husain',
     pubDev: 'https://pub.dev/packages?q=dependency%3Aadaptive_pane_scaffold+OR+sm2_spaced_repetition+OR+token_stream_controller+OR+dio_resilience_mock+OR+geofence_haversine',
     email: 'safeer.hussain.architect@gmail.com'
@@ -210,7 +211,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'octetpulse_app',
     name: 'octetpulse_app',
     title: 'Workforce Operations, Payroll & Encrypted VoIP',
-    category: 'Enterprise & Operations',
+    category: 'Operations & Civic',
     folder: 'octetpulse',
     screenshots: [
       'Screenshot_20261122-223414.jpg',
@@ -293,7 +294,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'fitone_app',
     name: 'fitone_app',
     title: 'AI Fitness & Biometric Coaching',
-    category: 'AI & Health',
+    category: 'Health & AI',
     folder: 'fitone',
     screenshots: [
       'Screenshot_20261122-215435.jpg',
@@ -335,7 +336,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'openpro_app',
     name: 'openpro_app',
     title: 'B2B Talent Network & Milestone Escrow',
-    category: 'Enterprise & Operations',
+    category: 'Operations & Civic',
     folder: 'openpro',
     screenshots: [
       'Screenshot_20261122-224542.jpg',
@@ -418,7 +419,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'cityzens_app',
     name: 'cityzens_app',
     title: 'Smart City & Civic Operations',
-    category: 'Enterprise & Operations',
+    category: 'Operations & Civic',
     folder: 'cityzens',
     screenshots: [
       'Screenshot_20261122-181102.jpg',
@@ -460,7 +461,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'golfer_app',
     name: 'golfer_app',
     title: 'Golf Rangefinder & Telemetry',
-    category: 'Smart Living & Lifestyle',
+    category: 'Smart Living & Media',
     folder: 'golfer',
     screenshots: [
       'Screenshot_20261122-224701.jpg',
@@ -501,7 +502,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'vitalis_app',
     name: 'vitalis_app',
     title: 'Telemedicine & Clinical Biometrics',
-    category: 'AI & Health',
+    category: 'Health & AI',
     folder: 'vitalis',
     screenshots: [
       'Screenshot_20261122-224053.jpg',
@@ -542,7 +543,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'fleetroute_app',
     name: 'fleetroute_app',
     title: 'Autonomous Fleet & Route Optimization',
-    category: 'Enterprise & Operations',
+    category: 'Operations & Civic',
     folder: 'fleetroute',
     screenshots: [
       'Screenshot_20261122-215312.jpg',
@@ -583,7 +584,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'nexushome_app',
     name: 'nexushome_app',
     title: 'Smart Home & Solar Grid Automation',
-    category: 'Smart Living & Lifestyle',
+    category: 'Smart Living & Media',
     folder: 'nexushome',
     screenshots: [
       'Screenshot_20261122-222952.jpg',
@@ -624,7 +625,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'estateview_app',
     name: 'estateview_app',
     title: 'PropTech & Spatial Floorplan Tours',
-    category: 'Smart Living & Lifestyle',
+    category: 'Smart Living & Media',
     folder: 'estateview',
     screenshots: [
       'Screenshot_20261122-213233.jpg',
@@ -665,7 +666,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'voyageai_app',
     name: 'voyageai_app',
     title: 'AI Expedition & Travel Companion',
-    category: 'Smart Living & Lifestyle',
+    category: 'Smart Living & Media',
     folder: 'voyageai',
     screenshots: [
       'Screenshot_20261122-224253.jpg',
@@ -706,7 +707,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'echostream_app',
     name: 'echostream_app',
     title: 'Lossless Spatial Audio & Podcast Studio',
-    category: 'Smart Living & Lifestyle',
+    category: 'Smart Living & Media',
     folder: 'echostream',
     screenshots: [
       'Screenshot_20261122-212603.jpg',
@@ -788,7 +789,7 @@ export const ENTERPRISE_APPS: ProjectArchitecture[] = [
     id: 'skillforge_app',
     name: 'skillforge_app',
     title: 'Adaptive EdTech & Code Sandbox',
-    category: 'AI & Health',
+    category: 'Health & AI',
     folder: 'skillforge',
     screenshots: [
       'Screenshot_20261122-223533.jpg',
@@ -1040,5 +1041,34 @@ export const CERTIFICATIONS: Certification[] = [
     credlyUrl: 'https://www.credly.com/users/safer-husain',
     skills: ['GitHub Actions Workflows', 'Docker Containerization', 'Automated Testing Gates', 'Semantic Versioning'],
     verificationId: 'CNCF-DO-4819'
+  }
+];
+
+export const OPEN_SOURCE_CONTRIBUTIONS: OpenSourceContribution[] = [
+  {
+    id: 'contrib-localsend',
+    project: 'localsend/localsend',
+    repoUrl: 'https://github.com/localsend/localsend',
+    prNumber: 3764,
+    prUrl: 'https://github.com/localsend/localsend/pull/3764',
+    issueNumber: 3709,
+    issueUrl: 'https://github.com/localsend/localsend/issues/3709',
+    title: 'Fix: Network interface binding & socket discovery fallback',
+    summary: 'Resolved interface enumeration failures during dynamic network transitions (switching between WiFi and cellular/hotspots), preventing file discovery dropouts.',
+    impact: 'Hardened peer discovery protocol with automated unit tests and clean static analysis verification.',
+    tags: ['Flutter', 'Network Sockets', 'Unit Tests', 'Peer-to-Peer']
+  },
+  {
+    id: 'contrib-dio',
+    project: 'cfug/dio',
+    repoUrl: 'https://github.com/cfug/dio',
+    prNumber: 2644,
+    prUrl: 'https://github.com/cfug/dio/pull/2644',
+    issueNumber: 2618,
+    issueUrl: 'https://github.com/cfug/dio/issues/2618',
+    title: 'Fix: Connection pool socket resource leak on request cancellation',
+    summary: 'Ensured immediate release of underlying native socket descriptors when an HTTP request stream is cancelled via CancelToken before completion.',
+    impact: 'Added high-concurrency regression test suite verifying zero socket descriptor leakage under rapid abort loops.',
+    tags: ['Dart', 'Networking', 'Concurrency', 'Resource Management']
   }
 ];

@@ -13,15 +13,15 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
 
   const navLinks = [
     { label: 'Work', href: '#work' },
-    { label: 'Open Source', href: '#packages' },
-    { label: 'Expertise', href: '#expertise' },
-    { label: 'Credentials', href: '#credentials' },
+    { label: 'Packages', href: '#packages' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Open Source', href: '#opensource' },
     { label: 'Contact', href: '#contact' },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-slate-950/85 dark:bg-slate-950/85 light:bg-white/90 border-b border-slate-800/80 dark:border-slate-800/80 light:border-slate-200/90 transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 w-full backdrop-blur-md bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/80 dark:border-slate-800/80 transition-colors duration-200">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Brand Identity */}
           <a 
@@ -29,14 +29,9 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             className="flex items-center gap-2.5 group focus:outline-none"
             aria-label="Safeer Hussain Home"
           >
-            <div className="w-8 h-8 rounded-lg bg-sky-500/10 dark:bg-sky-500/10 light:bg-sky-50 border border-sky-500/30 flex items-center justify-center text-sky-400 group-hover:border-sky-400 transition-colors">
-              <span className="font-bold text-sm tracking-tight text-sky-500 dark:text-sky-400 light:text-sky-600">SH</span>
-            </div>
-            <div>
-              <span className="font-bold text-base tracking-tight text-white dark:text-white light:text-slate-900 group-hover:text-sky-400 transition-colors block">
-                {HERO_DATA.name}
-              </span>
-            </div>
+            <span className="font-bold text-base sm:text-lg tracking-tight text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
+              {HERO_DATA.name}
+            </span>
           </a>
 
           {/* Desktop Navigation Links */}
@@ -45,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3.5 py-1.5 rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-600 hover:text-white dark:hover:text-white light:hover:text-slate-900 hover:bg-slate-800/60 dark:hover:bg-slate-800/60 light:hover:bg-slate-100 transition-colors"
+                className="px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60 transition-colors"
               >
                 {link.label}
               </a>
@@ -58,18 +53,18 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               href={HERO_DATA.socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700/80 dark:border-slate-700/80 light:border-slate-300 text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-slate-800 dark:hover:bg-slate-800 light:hover:bg-slate-100 transition-colors inline-flex items-center gap-1.5"
+              className="text-xs font-medium px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors inline-flex items-center gap-1.5"
             >
               <span>GitHub</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
             </a>
 
-            <div className="w-px h-5 bg-slate-800 dark:bg-slate-800 light:bg-slate-200" />
+            <div className="w-px h-4 bg-slate-200 dark:bg-slate-800" />
 
             <button
               onClick={toggleTheme}
               type="button"
-              className="p-2 rounded-lg border border-slate-800 dark:border-slate-800 light:border-slate-200 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white text-slate-300 dark:text-slate-300 light:text-slate-700 hover:text-sky-400 transition-colors"
+              className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 hover:border-slate-300 dark:hover:border-slate-700 transition-colors"
               title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
               aria-label="Toggle Theme"
             >
@@ -86,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             <button
               onClick={toggleTheme}
               type="button"
-              className="p-2 rounded-lg border border-slate-800 dark:border-slate-800 light:border-slate-300 bg-slate-900 dark:bg-slate-900 light:bg-white text-slate-300 dark:text-slate-300 light:text-slate-700"
+              className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300"
               aria-label="Toggle Theme"
             >
               {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-sky-600" />}
@@ -94,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               type="button"
-              className="p-2 rounded-lg border border-slate-800 dark:border-slate-800 light:border-slate-300 text-slate-300 dark:text-slate-300 light:text-slate-700 bg-slate-900 dark:bg-slate-900 light:bg-white"
+              className="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-900"
               aria-label={mobileMenuOpen ? "Close Menu" : "Open Menu"}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -105,23 +100,23 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-800/80 dark:border-slate-800/80 light:border-slate-200 bg-slate-950/98 dark:bg-slate-950/98 light:bg-white/98 px-4 py-4 space-y-2 text-sm font-medium">
+        <div className="md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-4 space-y-2 text-sm font-medium shadow-lg">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-slate-800 dark:hover:bg-slate-800 light:hover:bg-slate-100 transition-colors"
+              className="block px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             >
               {link.label}
             </a>
           ))}
-          <div className="pt-2 border-t border-slate-800/80 dark:border-slate-800/80 light:border-slate-200">
+          <div className="pt-2 border-t border-slate-200 dark:border-slate-800">
             <a
               href={HERO_DATA.socialLinks.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between px-3 py-2 rounded-lg text-slate-300 dark:text-slate-300 light:text-slate-700 hover:bg-slate-800 dark:hover:bg-slate-800 light:hover:bg-slate-100"
+              className="flex items-center justify-between px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
             >
               <span>GitHub Profile</span>
               <ArrowUpRight className="w-4 h-4" />

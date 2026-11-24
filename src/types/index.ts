@@ -1,9 +1,9 @@
 export type ProjectCategory = 
   | 'All' 
   | 'FinTech & Commerce' 
-  | 'AI & Health' 
-  | 'Enterprise & Operations' 
-  | 'Smart Living & Lifestyle';
+  | 'Health & AI' 
+  | 'Operations & Civic' 
+  | 'Smart Living & Media';
 
 export interface ProjectArchitecture {
   id: string;
@@ -47,6 +47,20 @@ export interface OpenSourcePackage {
   codeSnippet: string;
   pubScoreTarget: string;
   version: string;
+}
+
+export interface OpenSourceContribution {
+  id: string;
+  project: string;
+  repoUrl: string;
+  prNumber: number;
+  prUrl: string;
+  issueNumber: number;
+  issueUrl: string;
+  title: string;
+  summary: string;
+  impact: string;
+  tags: string[];
 }
 
 export interface EngineeringPillar {
